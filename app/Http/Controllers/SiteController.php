@@ -50,11 +50,6 @@ class SiteController extends Controller
         if (!is_null($elements)) {
             $token_per_btc_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
             $buy_token_by_btc = $btc_last_price / $token_per_btc_buy_rate;
-            // echo "<strong>Buy Rate: </strong>".number_format($token_per_btc_buy_rate,2,".",",")." Token/BTC";
-            // echo "<br/>";
-            // echo "<strong>ซื้อ Token ด้วย BTC: </strong>".number_format($buy_token_by_btc,2,".",",")." บาท";
-            // echo "<br/>";
-            // echo "<br/>";
         }
 
         $elements = $packtPageXpath->query('//*[@id="order_sell"]/tr[1]/td[1]');	// Querying for <h1> (title of book)
@@ -64,11 +59,6 @@ class SiteController extends Controller
         if (!is_null($elements)) {
             $token_per_btc_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
             $sell_token_by_btc = $btc_last_price / $token_per_btc_sell_rate;
-            // echo "<strong>Sale Rate: </strong>".number_format($token_btc_sell,2,".",",")." Token/BTC";
-            // echo "<br/>";
-            // echo "<strong>ขาย Token เพื่อออกระบบทาง BTC: </strong>".number_format($btc_last_price / $token_btc_sell,2,".",",")." บาท";
-            // echo "<br/>";
-            // echo "<br/>";
         }
 
         // ------------------------------ Token/BCH ------------------------------
@@ -82,11 +72,6 @@ class SiteController extends Controller
         if (!is_null($elements)) {
             $token_per_bch_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
             $buy_token_by_bch = $bch_last_price / $token_per_bch_buy_rate;
-            // echo "<strong>Buy Rate: </strong>".$token_bch_buy." Token/BCH";
-            // echo "<br/>";
-            // echo "<strong>ซื้อ Token ด้วย BCH: </strong>".number_format($bch_last_price / $token_bch_buy,2,".",",")." บาท";
-            // echo "<br/>";
-            // echo "<br/>";
         }
 
         $elements = $packtPageXpath->query('//*[@id="order_sell"]/tr[1]/td[1]');	// Querying for <h1> (title of book)
@@ -96,11 +81,6 @@ class SiteController extends Controller
         if (!is_null($elements)) {
             $token_per_bch_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
             $sell_token_by_bch = $bch_last_price / $token_per_bch_sell_rate;
-            // echo "<strong>Sale Rate: </strong>".$token_bch_sell." Token/BCH";
-            // echo "<br/>";
-            // echo "<strong>ขาย Token ด้วย BCH: </strong>".number_format($bch_last_price / $token_bch_sell,2,".",",")." บาท";
-            // echo "<br/>";
-            // echo "<br/>";
         }
 
         return view('welcome', [
