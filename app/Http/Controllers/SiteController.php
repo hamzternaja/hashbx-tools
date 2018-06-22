@@ -83,6 +83,24 @@ class SiteController extends Controller
             $sell_token_by_bch = $bch_last_price / $token_per_bch_sell_rate;
         }
 
+        // ------------------------------ Token/HBX ------------------------------
+        $output = $this->curlGet('https://hashbx.io/exchange/Token/HBX');
+        $packtPageXpath = $this->returnXPathObject($output);	// Instantiating new XPath DOM object
+
+        $elements = $packtPageXpath->query('//*[@id="order_buy"]/tr[1]/td[3]');	// Querying for <h1> (title of book)
+
+        $token_per_hbx_buy_rate = 0.0;
+        if (!is_null($elements)) {
+            $token_per_hbx_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
+        }
+
+        $elements = $packtPageXpath->query('//*[@id="order_sell"]/tr[1]/td[1]');	// Querying for <h1> (title of book)
+
+        $token_per_hbx_sell_rate = 0.0;
+        if (!is_null($elements)) {
+            $token_per_hbx_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
+        }
+
         return view('welcome', [
             'time_text' => thaidate("วันlที่ j F H:i น.", time()),
             'btc_last_price' => $btc_last_price,
@@ -97,6 +115,11 @@ class SiteController extends Controller
             'buy_token_by_bch' => $buy_token_by_bch,
             'token_per_bch_sell_rate' => $token_per_bch_sell_rate,
             'sell_token_by_bch' => $sell_token_by_bch,
+
+            'token_per_hbx_buy_rate' => $token_per_hbx_buy_rate,
+            'token_per_hbx_sell_rate' => $token_per_hbx_sell_rate,
+            // 'buy_token_by_hbx' => $buy_token_by_hbx,
+            // 'sell_token_by_hbx' => $sell_token_by_hbx,
         ]);
     }
 }
