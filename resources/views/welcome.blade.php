@@ -108,7 +108,7 @@
                             </li>
                             <li class="list-group-item d-flex justify-content-between lh-condensed">
                                 <div>
-                                    <h6 class="my-0">ขาย Token ด้วย BTC :</h6>
+                                    <h6 class="my-0">ขาย Token เพื่อรับ BTC :</h6>
                                 </div>
                                 <span>{{ number_format($sell_token_by_btc,2,".", ",") }} บาท</span>
                             </li>
@@ -150,13 +150,13 @@
                         <ul class="list-group mb-3">
                             <li class="list-group-item d-flex justify-content-between lh-condensed">
                                 <div>
-                                    <h6 class="my-0">Buy Rate :</h6>
+                                    <h6 class="my-0">Sell Rate :</h6>
                                 </div>
                                 <span>{{ number_format($token_per_bch_sell_rate,2,".", ",") }} Token/BCH</span>
                             </li>
                             <li class="list-group-item d-flex justify-content-between lh-condensed">
                                 <div>
-                                    <h6 class="my-0">ซื้อ Token ด้วย BCH :</h6>
+                                    <h6 class="my-0">ขาย Token เพื่อรับ BCH :</h6>
                                 </div>
                                 <span>{{ number_format($sell_token_by_bch,2,".", ",") }} บาท</span>
                             </li>
