@@ -16,7 +16,7 @@ class SiteController extends Controller
         return $xmlPageXPath; // Returning XPath object
     }
 
-    function curlGet($url) {
+    private function curlGet($url) {
         $ch = curl_init($url);
 
         // curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
@@ -32,11 +32,6 @@ class SiteController extends Controller
 
     public function index(Request $request)
     {
-        echo "<strong>เวลา </strong>";
-        echo thaidate("วันlที่ j F H:i น.", time());
-
-        echo "<br/>";
-        echo "<br/>";
         // ------------------------ BX Data ------------------------------------------------
 
         $output = $this->curlGet('https://bx.in.th/api/');
@@ -46,34 +41,34 @@ class SiteController extends Controller
         $btc_last_price = $output_arr[1]["last_price"];     // BTC
         $bch_last_price = $output_arr[27]["last_price"];    // BCH
 
-        echo "<strong>".$output_arr[1]["secondary_currency"]." Price : </strong>"." ".number_format($btc_last_price,2,".",",")." บาท";
-        echo "<br/>";
-        echo "<strong>".$output_arr[27]["secondary_currency"]." Price : </strong>"." ".number_format($bch_last_price,2,".",",")." บาท";
-
-        echo "<br/><br/>";
         // ------------------------------ Token/BTC ------------------------------
-
         $output = $this->curlGet('https://hashbx.io/exchange/Token/BTC');
         $packtPageXpath = $this->returnXPathObject($output);	// Instantiating new XPath DOM object
         $elements = $packtPageXpath->query('//*[@id="order_buy"]/tr[1]/td[3]');	// Querying for <h1> (title of book)
+        $token_per_btc_buy_rate = 0.0;
+        $buy_token_by_btc = 0.0;
         if (!is_null($elements)) {
-            $token_btc_buy = floatval(str_replace(",","",$elements[0]->nodeValue));
-            echo "<strong>Buy Rate: </strong>".number_format($token_btc_buy,2,".",",")." Token/BTC";
-            echo "<br/>";
-            echo "<strong>ซื้อ Token ด้วย BTC: </strong>".number_format($btc_last_price / $token_btc_buy,2,".",",")." บาท";
-            echo "<br/>";
-            echo "<br/>";
+            $token_per_btc_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
+            $buy_token_by_btc = $btc_last_price / $token_per_btc_buy_rate;
+            // echo "<strong>Buy Rate: </strong>".number_format($token_per_btc_buy_rate,2,".",",")." Token/BTC";
+            // echo "<br/>";
+            // echo "<strong>ซื้อ Token ด้วย BTC: </strong>".number_format($buy_token_by_btc,2,".",",")." บาท";
+            // echo "<br/>";
+            // echo "<br/>";
         }
 
         $elements = $packtPageXpath->query('//*[@id="order_sell"]/tr[1]/td[1]');	// Querying for <h1> (title of book)
 
+        $token_per_btc_sell_rate = 0.0;
+        $sell_token_by_btc = 0.0;
         if (!is_null($elements)) {
-            $token_btc_sell = floatval(str_replace(",","",$elements[0]->nodeValue));
-            echo "<strong>Sale Rate: </strong>".number_format($token_btc_sell,2,".",",")." Token/BTC";
-            echo "<br/>";
-            echo "<strong>ขาย Token เพื่อออกระบบทาง BTC: </strong>".number_format($btc_last_price / $token_btc_sell,2,".",",")." บาท";
-            echo "<br/>";
-            echo "<br/>";
+            $token_per_btc_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
+            $sell_token_by_btc = $btc_last_price / $token_per_btc_sell_rate;
+            // echo "<strong>Sale Rate: </strong>".number_format($token_btc_sell,2,".",",")." Token/BTC";
+            // echo "<br/>";
+            // echo "<strong>ขาย Token เพื่อออกระบบทาง BTC: </strong>".number_format($btc_last_price / $token_btc_sell,2,".",",")." บาท";
+            // echo "<br/>";
+            // echo "<br/>";
         }
 
         // ------------------------------ Token/BCH ------------------------------
@@ -82,24 +77,46 @@ class SiteController extends Controller
 
         $elements = $packtPageXpath->query('//*[@id="order_buy"]/tr[1]/td[3]');	// Querying for <h1> (title of book)
 
+        $token_per_bch_buy_rate = 0.0;
+        $buy_token_by_bch = 0.0;
         if (!is_null($elements)) {
-            $token_bch_buy = floatval(str_replace(",","",$elements[0]->nodeValue));
-            echo "<strong>Buy Rate: </strong>".$token_bch_buy." Token/BCH";
-            echo "<br/>";
-            echo "<strong>ซื้อ Token ด้วย BCH: </strong>".number_format($bch_last_price / $token_bch_buy,2,".",",")." บาท";
-            echo "<br/>";
-            echo "<br/>";
+            $token_per_bch_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
+            $buy_token_by_bch = $bch_last_price / $token_per_bch_buy_rate;
+            // echo "<strong>Buy Rate: </strong>".$token_bch_buy." Token/BCH";
+            // echo "<br/>";
+            // echo "<strong>ซื้อ Token ด้วย BCH: </strong>".number_format($bch_last_price / $token_bch_buy,2,".",",")." บาท";
+            // echo "<br/>";
+            // echo "<br/>";
         }
 
         $elements = $packtPageXpath->query('//*[@id="order_sell"]/tr[1]/td[1]');	// Querying for <h1> (title of book)
 
+        $token_per_bch_sell_rate = 0.0;
+        $sell_token_by_bch = 0.0;
         if (!is_null($elements)) {
-            $token_bch_sell = floatval(str_replace(",","",$elements[0]->nodeValue));
-            echo "<strong>Sale Rate: </strong>".$token_bch_sell." Token/BCH";
-            echo "<br/>";
-            echo "<strong>ขาย Token ด้วย BCH: </strong>".number_format($bch_last_price / $token_bch_sell,2,".",",")." บาท";
-            echo "<br/>";
-            echo "<br/>";
+            $token_per_bch_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
+            $sell_token_by_bch = $bch_last_price / $token_per_bch_sell_rate;
+            // echo "<strong>Sale Rate: </strong>".$token_bch_sell." Token/BCH";
+            // echo "<br/>";
+            // echo "<strong>ขาย Token ด้วย BCH: </strong>".number_format($bch_last_price / $token_bch_sell,2,".",",")." บาท";
+            // echo "<br/>";
+            // echo "<br/>";
         }
+
+        return view('welcome', [
+            'time_text' => thaidate("วันlที่ j F H:i น.", time()),
+            'btc_last_price' => $btc_last_price,
+            'bch_last_price' => $bch_last_price,
+
+            'token_per_btc_buy_rate' => $token_per_btc_buy_rate,
+            'buy_token_by_btc' => $buy_token_by_btc,
+            'token_per_btc_sell_rate' => $token_per_btc_sell_rate,
+            'sell_token_by_btc' => $sell_token_by_btc,
+
+            'token_per_bch_buy_rate' => $token_per_bch_buy_rate,
+            'buy_token_by_bch' => $buy_token_by_bch,
+            'token_per_bch_sell_rate' => $token_per_bch_sell_rate,
+            'sell_token_by_bch' => $sell_token_by_bch,
+        ]);
     }
 }
