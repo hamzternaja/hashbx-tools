@@ -16,3 +16,4 @@ Route::get('/token', 'SiteController@token');
 Route::get('/cloudmining', 'SiteController@cloudmining');
 
 Route::get('/faq', 'SiteController@faq');
+Route::get('/about-us', 'SiteController@aboutus');

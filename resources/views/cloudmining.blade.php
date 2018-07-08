@@ -124,6 +124,436 @@
         </div>
     </div>
 </div>
+<!-- END HBX -->
+
+<!-- BCHTHs -->
+<div class="row" style="margin-top:0px">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                ราคาซื้อ BCHTHs ด้วย Token
+            </div>
+            <div class="card-body">
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">Buy Rate :</h6>
+                        </div>
+                        <span>{{ number_format($token_per_bchths_sell_rate,2,".", ",") }} Token/BCHTHs</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">ซื้อ BCHTHs ด้วย Token ที่ฝากด้วย BTC : </h6>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">{{ number_format( $token_per_bchths_sell_rate ,2,".", ",") }} * {{ number_format( $buy_token_by_btc ,2,".", ",") }} = </h6>
+                        </div>
+                        <span class="text-success">{{ number_format( $token_per_bchths_sell_rate * $buy_token_by_btc,2,".", ",") }} บาท</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">ซื้อ BCHTHs ด้วย Token ที่ฝากด้วย BCH : </h6>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">{{ number_format( $token_per_bchths_sell_rate ,2,".", ",") }} * {{ number_format( $buy_token_by_bch ,2,".", ",") }} = </h6>
+                        </div>
+                        <span class="text-success">{{ number_format( $token_per_bchths_sell_rate * $buy_token_by_bch,2,".", ",") }} บาท</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                ราคาขาย BCHTHs เป็น Token
+            </div>
+            <div class="card-body">
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">Sell Rate :</h6>
+                        </div>
+                        <span>{{ number_format($token_per_bchths_buy_rate,2,".", ",") }} Token/BCHTHs</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">ขาย BCHTHs เป็น Token แล้วถอนด้วย BTC : </h6>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">{{ number_format( $token_per_bchths_buy_rate ,2,".", ",") }} * {{ number_format( $sell_token_by_btc ,2,".", ",") }} = </h6>
+                        </div>
+                        <span class="text-danger">{{ number_format( $token_per_bchths_buy_rate * $sell_token_by_btc,2,".", ",") }} บาท</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">ขาย BCHTHs เป็น Token แล้วถอนด้วย BCH : </h6>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">{{ number_format( $token_per_bchths_buy_rate ,2,".", ",") }} * {{ number_format( $sell_token_by_bch ,2,".", ",") }} = </h6>
+                        </div>
+                        <span class="text-danger">{{ number_format( $token_per_bchths_buy_rate * $sell_token_by_bch,2,".", ",") }} บาท</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END BCHTHs -->
+
+
+<!-- XCNMHs -->
+<div class="row" style="margin-top:0px">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                ราคาซื้อ XCNMHs ด้วย Token
+            </div>
+            <div class="card-body">
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">Buy Rate :</h6>
+                        </div>
+                        <span>{{ number_format($token_per_xcnmhs_sell_rate,2,".", ",") }} Token/XCNMHs</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">ซื้อ XCNMHs ด้วย Token ที่ฝากด้วย BTC : </h6>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">{{ number_format( $token_per_xcnmhs_sell_rate ,2,".", ",") }} * {{ number_format( $buy_token_by_btc ,2,".", ",") }} = </h6>
+                        </div>
+                        <span class="text-success">{{ number_format( $token_per_xcnmhs_sell_rate * $buy_token_by_btc,2,".", ",") }} บาท</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">ซื้อ XCNMHs ด้วย Token ที่ฝากด้วย BCH : </h6>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">{{ number_format( $token_per_xcnmhs_sell_rate ,2,".", ",") }} * {{ number_format( $buy_token_by_bch ,2,".", ",") }} = </h6>
+                        </div>
+                        <span class="text-success">{{ number_format( $token_per_xcnmhs_sell_rate * $buy_token_by_bch,2,".", ",") }} บาท</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                ราคาขาย XCNMHs เป็น Token
+            </div>
+            <div class="card-body">
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">Sell Rate :</h6>
+                        </div>
+                        <span>{{ number_format($token_per_xcnmhs_buy_rate,2,".", ",") }} Token/XCNMHs</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">ขาย XCNMHs เป็น Token แล้วถอนด้วย BTC : </h6>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">{{ number_format( $token_per_xcnmhs_buy_rate ,2,".", ",") }} * {{ number_format( $sell_token_by_btc ,2,".", ",") }} = </h6>
+                        </div>
+                        <span class="text-danger">{{ number_format( $token_per_xcnmhs_buy_rate * $sell_token_by_btc,2,".", ",") }} บาท</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">ขาย XCNMHs เป็น Token แล้วถอนด้วย BCH : </h6>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">{{ number_format( $token_per_xcnmhs_buy_rate ,2,".", ",") }} * {{ number_format( $sell_token_by_bch ,2,".", ",") }} = </h6>
+                        </div>
+                        <span class="text-danger">{{ number_format( $token_per_xcnmhs_buy_rate * $sell_token_by_bch,2,".", ",") }} บาท</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END XCNMHs -->
+
+
+<!-- XMRKHs -->
+<div class="row" style="margin-top:0px">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                ราคาซื้อ XMRKHs ด้วย Token
+            </div>
+            <div class="card-body">
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">Buy Rate :</h6>
+                        </div>
+                        <span>{{ number_format($token_per_xmrkhs_sell_rate,2,".", ",") }} Token/XMRKHs</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">ซื้อ XMRKHs ด้วย Token ที่ฝากด้วย BTC : </h6>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">{{ number_format( $token_per_xmrkhs_sell_rate ,2,".", ",") }} * {{ number_format( $buy_token_by_btc ,2,".", ",") }} = </h6>
+                        </div>
+                        <span class="text-success">{{ number_format( $token_per_xmrkhs_sell_rate * $buy_token_by_btc,2,".", ",") }} บาท</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">ซื้อ XMRKHs ด้วย Token ที่ฝากด้วย BCH : </h6>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">{{ number_format( $token_per_xmrkhs_sell_rate ,2,".", ",") }} * {{ number_format( $buy_token_by_bch ,2,".", ",") }} = </h6>
+                        </div>
+                        <span class="text-success">{{ number_format( $token_per_xmrkhs_sell_rate * $buy_token_by_bch,2,".", ",") }} บาท</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                ราคาขาย XMRKHs เป็น Token
+            </div>
+            <div class="card-body">
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">Sell Rate :</h6>
+                        </div>
+                        <span>{{ number_format($token_per_xmrkhs_buy_rate,2,".", ",") }} Token/XMRKHs</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">ขาย XMRKHs เป็น Token แล้วถอนด้วย BTC : </h6>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">{{ number_format( $token_per_xmrkhs_buy_rate ,2,".", ",") }} * {{ number_format( $sell_token_by_btc ,2,".", ",") }} = </h6>
+                        </div>
+                        <span class="text-danger">{{ number_format( $token_per_xmrkhs_buy_rate * $sell_token_by_btc,2,".", ",") }} บาท</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">ขาย XMRKHs เป็น Token แล้วถอนด้วย BCH : </h6>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">{{ number_format( $token_per_xmrkhs_buy_rate ,2,".", ",") }} * {{ number_format( $sell_token_by_bch ,2,".", ",") }} = </h6>
+                        </div>
+                        <span class="text-danger">{{ number_format( $token_per_xmrkhs_buy_rate * $sell_token_by_bch,2,".", ",") }} บาท</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END XMRKHs -->
+
+
+<!-- UNITTHs -->
+<div class="row" style="margin-top:0px">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                ราคาซื้อ UNITTHs ด้วย Token
+            </div>
+            <div class="card-body">
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">Buy Rate :</h6>
+                        </div>
+                        <span>{{ number_format($token_per_unitths_sell_rate,2,".", ",") }} Token/UNITTHs</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">ซื้อ UNITTHs ด้วย Token ที่ฝากด้วย BTC : </h6>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">{{ number_format( $token_per_unitths_sell_rate ,2,".", ",") }} * {{ number_format( $buy_token_by_btc ,2,".", ",") }} = </h6>
+                        </div>
+                        <span class="text-success">{{ number_format( $token_per_unitths_sell_rate * $buy_token_by_btc,2,".", ",") }} บาท</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">ซื้อ UNITTHs ด้วย Token ที่ฝากด้วย BCH : </h6>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">{{ number_format( $token_per_unitths_sell_rate ,2,".", ",") }} * {{ number_format( $buy_token_by_bch ,2,".", ",") }} = </h6>
+                        </div>
+                        <span class="text-success">{{ number_format( $token_per_unitths_sell_rate * $buy_token_by_bch,2,".", ",") }} บาท</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                ราคาขาย UNITTHs เป็น Token
+            </div>
+            <div class="card-body">
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">Sell Rate :</h6>
+                        </div>
+                        <span>{{ number_format($token_per_unitths_buy_rate,2,".", ",") }} Token/UNITTHs</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">ขาย UNITTHs เป็น Token แล้วถอนด้วย BTC : </h6>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">{{ number_format( $token_per_unitths_buy_rate ,2,".", ",") }} * {{ number_format( $sell_token_by_btc ,2,".", ",") }} = </h6>
+                        </div>
+                        <span class="text-danger">{{ number_format( $token_per_unitths_buy_rate * $sell_token_by_btc,2,".", ",") }} บาท</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">ขาย UNITTHs เป็น Token แล้วถอนด้วย BCH : </h6>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">{{ number_format( $token_per_unitths_buy_rate ,2,".", ",") }} * {{ number_format( $sell_token_by_bch ,2,".", ",") }} = </h6>
+                        </div>
+                        <span class="text-danger">{{ number_format( $token_per_unitths_buy_rate * $sell_token_by_bch,2,".", ",") }} บาท</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END UNITTHs -->
+
+
+<!-- ETCMHs -->
+<div class="row" style="margin-top:0px">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                ราคาซื้อ ETCMHs ด้วย Token
+            </div>
+            <div class="card-body">
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">Buy Rate :</h6>
+                        </div>
+                        <span>{{ number_format($token_per_etcmhs_sell_rate,2,".", ",") }} Token/ETCMHs</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">ซื้อ ETCMHs ด้วย Token ที่ฝากด้วย BTC : </h6>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">{{ number_format( $token_per_etcmhs_sell_rate ,2,".", ",") }} * {{ number_format( $buy_token_by_btc ,2,".", ",") }} = </h6>
+                        </div>
+                        <span class="text-success">{{ number_format( $token_per_etcmhs_sell_rate * $buy_token_by_btc,2,".", ",") }} บาท</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">ซื้อ ETCMHs ด้วย Token ที่ฝากด้วย BCH : </h6>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">{{ number_format( $token_per_etcmhs_sell_rate ,2,".", ",") }} * {{ number_format( $buy_token_by_bch ,2,".", ",") }} = </h6>
+                        </div>
+                        <span class="text-success">{{ number_format( $token_per_etcmhs_sell_rate * $buy_token_by_bch,2,".", ",") }} บาท</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                ราคาขาย ETCMHs เป็น Token
+            </div>
+            <div class="card-body">
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">Sell Rate :</h6>
+                        </div>
+                        <span>{{ number_format($token_per_etcmhs_buy_rate,2,".", ",") }} Token/ETCMHs</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">ขาย ETCMHs เป็น Token แล้วถอนด้วย BTC : </h6>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">{{ number_format( $token_per_etcmhs_buy_rate ,2,".", ",") }} * {{ number_format( $sell_token_by_btc ,2,".", ",") }} = </h6>
+                        </div>
+                        <span class="text-danger">{{ number_format( $token_per_etcmhs_buy_rate * $sell_token_by_btc,2,".", ",") }} บาท</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">ขาย ETCMHs เป็น Token แล้วถอนด้วย BCH : </h6>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">{{ number_format( $token_per_etcmhs_buy_rate ,2,".", ",") }} * {{ number_format( $sell_token_by_bch ,2,".", ",") }} = </h6>
+                        </div>
+                        <span class="text-danger">{{ number_format( $token_per_etcmhs_buy_rate * $sell_token_by_bch,2,".", ",") }} บาท</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END ETCMHs -->
+
+
+<div class="row" style="margin-top:10px">
+    <div class="col-md-12">
+        <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading">หมายเหตุ</h4>
+            <p>- DOGEGHs ยังไม่มีวางขาย เตรียมเพิ่มเร็วๆ นี้</p>
+        </div>
+    </div>
+</div>
 
     
 @endsection

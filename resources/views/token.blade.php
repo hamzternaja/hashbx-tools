@@ -2,6 +2,38 @@
 
 @section('content')
 
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                ข้อมูลพื้นฐานทั่วไป (จาก <a href="http://www.bx.in.th" target="_blank">bx.in.th</a>)
+            </div>
+            <div class="card-body">
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">Update ล่าสุด - เวลา</h6>
+                        </div>
+                        <span>{{ $time_text }}</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">ราคา BTC (บาท):</h6>
+                        </div>
+                        <span>{{ number_format($btc_last_price,2,".", ",") }} บาท</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">ราคา BCH (บาท):</h6>
+                        </div>
+                        <span>{{ number_format($bch_last_price,2,".", ",") }} บาท</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="row" style="margin-top:30px">
     <div class="col-md-12">
         <div class="card">

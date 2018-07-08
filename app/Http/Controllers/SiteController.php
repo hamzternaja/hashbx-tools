@@ -326,6 +326,105 @@ class SiteController extends Controller
         if (!is_null($elements)) {
             $token_per_hbx_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
         }
+        // ------------------------------ END Token/HBX ------------------------------
+
+
+        // ------------------------------ Token/BCHTHs ------------------------------
+        $output = $this->curlGet('https://hashbx.io/exchange/Token/BCHTHs');
+        $packtPageXpath = $this->returnXPathObject($output);	// Instantiating new XPath DOM object
+
+        $elements = $packtPageXpath->query('//*[@id="order_buy"]/tr[1]/td[3]');	// Querying for <h1> (title of book)
+
+        $token_per_bchths_buy_rate = 0.0;
+        if (!is_null($elements)) {
+            $token_per_bchths_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
+        }
+
+        $elements = $packtPageXpath->query('//*[@id="order_sell"]/tr[1]/td[1]');	// Querying for <h1> (title of book)
+
+        $token_per_bchths_sell_rate = 0.0;
+        if (!is_null($elements)) {
+            $token_per_bchths_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
+        }
+        // ------------------------------ END Token/BCHTHs ------------------------------
+
+        // ------------------------------ Token/XCNMHs ------------------------------
+        $output = $this->curlGet('https://hashbx.io/exchange/Token/XCNMHs');
+        $packtPageXpath = $this->returnXPathObject($output);	// Instantiating new XPath DOM object
+
+        $elements = $packtPageXpath->query('//*[@id="order_buy"]/tr[1]/td[3]');	// Querying for <h1> (title of book)
+
+        $token_per_xcnmhs_buy_rate = 0.0;
+        if (!is_null($elements)) {
+            $token_per_xcnmhs_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
+        }
+
+        $elements = $packtPageXpath->query('//*[@id="order_sell"]/tr[1]/td[1]');	// Querying for <h1> (title of book)
+
+        $token_per_xcnmhs_sell_rate = 0.0;
+        if (!is_null($elements)) {
+            $token_per_xcnmhs_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
+        }
+        // ------------------------------ END Token/XCNMHs ------------------------------
+
+        // ------------------------------ Token/XMRKHs ------------------------------
+        $output = $this->curlGet('https://hashbx.io/exchange/Token/XMRKHs');
+        $packtPageXpath = $this->returnXPathObject($output);	// Instantiating new XPath DOM object
+
+        $elements = $packtPageXpath->query('//*[@id="order_buy"]/tr[1]/td[3]');	// Querying for <h1> (title of book)
+
+        $token_per_xmrkhs_buy_rate = 0.0;
+        if (!is_null($elements)) {
+            $token_per_xmrkhs_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
+        }
+
+        $elements = $packtPageXpath->query('//*[@id="order_sell"]/tr[1]/td[1]');	// Querying for <h1> (title of book)
+
+        $token_per_xmrkhs_sell_rate = 0.0;
+        if (!is_null($elements)) {
+            $token_per_xmrkhs_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
+        }
+        // ------------------------------ END Token/XMRKHs ------------------------------
+
+        // ------------------------------ Token/UNITTHs ------------------------------
+        $output = $this->curlGet('https://hashbx.io/exchange/Token/UNITTHs');
+        $packtPageXpath = $this->returnXPathObject($output);	// Instantiating new XPath DOM object
+
+        $elements = $packtPageXpath->query('//*[@id="order_buy"]/tr[1]/td[3]');	// Querying for <h1> (title of book)
+
+        $token_per_unitths_buy_rate = 0.0;
+        if (!is_null($elements)) {
+            $token_per_unitths_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
+        }
+
+        $elements = $packtPageXpath->query('//*[@id="order_sell"]/tr[1]/td[1]');	// Querying for <h1> (title of book)
+
+        $token_per_unitths_sell_rate = 0.0;
+        if (!is_null($elements)) {
+            $token_per_unitths_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
+        }
+        // ------------------------------ END Token/UNITTHs ------------------------------
+
+
+        // ------------------------------ Token/ETCMHs ------------------------------
+        $output = $this->curlGet('https://hashbx.io/exchange/Token/ETCMHs');
+        $packtPageXpath = $this->returnXPathObject($output);	// Instantiating new XPath DOM object
+
+        $elements = $packtPageXpath->query('//*[@id="order_buy"]/tr[1]/td[3]');	// Querying for <h1> (title of book)
+
+        $token_per_etcmhs_buy_rate = 0.0;
+        if (!is_null($elements)) {
+            $token_per_etcmhs_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
+        }
+
+        $elements = $packtPageXpath->query('//*[@id="order_sell"]/tr[1]/td[1]');	// Querying for <h1> (title of book)
+
+        $token_per_etcmhs_sell_rate = 0.0;
+        if (!is_null($elements)) {
+            $token_per_etcmhs_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
+        }
+        // ------------------------------ END Token/ETCMHs ------------------------------
+
 
         return view('cloudmining', [
             'time_text' => thaidate("วันlที่ j F H:i น.", time()),
@@ -344,13 +443,33 @@ class SiteController extends Controller
 
             'token_per_hbx_buy_rate' => $token_per_hbx_buy_rate,
             'token_per_hbx_sell_rate' => $token_per_hbx_sell_rate,
-            // 'buy_token_by_hbx' => $buy_token_by_hbx,
-            // 'sell_token_by_hbx' => $sell_token_by_hbx,
+
+            'token_per_bchths_buy_rate' => $token_per_bchths_buy_rate,
+            'token_per_bchths_sell_rate' => $token_per_bchths_sell_rate,
+
+            'token_per_xcnmhs_buy_rate' => $token_per_xcnmhs_buy_rate,
+            'token_per_xcnmhs_sell_rate' => $token_per_xcnmhs_sell_rate,
+            
+            'token_per_xmrkhs_buy_rate' => $token_per_xmrkhs_buy_rate,
+            'token_per_xmrkhs_sell_rate' => $token_per_xmrkhs_sell_rate,
+
+            'token_per_unitths_buy_rate' => $token_per_unitths_buy_rate,
+            'token_per_unitths_sell_rate' => $token_per_unitths_sell_rate,
+
+            // DOGEGHs ยังไม่มีวางขาย เตรียมเพิ่มเร็วๆ นี้
+
+            'token_per_etcmhs_buy_rate' => $token_per_etcmhs_buy_rate,
+            'token_per_etcmhs_sell_rate' => $token_per_etcmhs_sell_rate,
         ]);
     }
 
     public function faq(Request $request)
     {
         return view('faq');
+    }
+
+    public function aboutus(Request $request)
+    {
+        return view('aboutus');
     }
 }
