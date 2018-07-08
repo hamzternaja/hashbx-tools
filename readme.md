@@ -17,6 +17,7 @@ Web App : [http://hashbx.porrapat.com](http://hashbx.porrapat.com)
 
 ## แรงบันดาลใจ ##
 * [Arbitrate Bot CryptoVationX](https://arbot.cryptovation.co/)
+* [Github CryptoVationX](https://arbot.cryptovation.co/)
 
 ## ข้อควรระวัง ##
 เว็บนี้เพียงแค่ดึงข้อมูลจากต้นทาง และ ให้คำแนะนำ โปรดเช็คข้อมูลราคาที่แท้จริง และ ตรวจสอบการคำนวณค่าเงินต่างๆ ด้วยตัวท่านเองอีกรอบ ก่อนลงทุน หรือ เทรดทุกครั้ง ถ้ามีข้อผิดพลาด หรือ คำแนะนำเพิ่มเติม โปรดติดต่อมา เราจะปรับปรุงแก้ไขให้ดีที่สุดครับ

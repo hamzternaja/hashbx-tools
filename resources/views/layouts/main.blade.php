@@ -14,13 +14,12 @@
 <body>
 
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <a class="navbar-brand" href="/">HASHBX.IO Analysis Tools 1.0</a>
+        <a class="navbar-brand" href="/">HASHBX.IO Tools 1.0</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav mr-auto">
             <li class="nav-item">
                 <a class="nav-link" href="/">Dashboard <span class="sr-only">(current)</span></a>
@@ -32,7 +31,7 @@
                 <a class="nav-link" href="/cloudmining">Cloud Mining</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">FAQ</a>
+                <a class="nav-link" href="/faq">FAQ</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">About Us</a>

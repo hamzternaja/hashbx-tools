@@ -18,15 +18,27 @@
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
-                        <h6 class="my-0">ราคา BTC :</h6>
+                        <h6 class="my-0">ราคา BTC (บาท):</h6>
                     </div>
                     <span>{{ number_format($btc_last_price,2,".", ",") }} บาท</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
-                        <h6 class="my-0">ราคา BCH :</h6>
+                        <h6 class="my-0">ราคา BCH (บาท):</h6>
                     </div>
                     <span>{{ number_format($bch_last_price,2,".", ",") }} บาท</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 class="my-0">ราคา DOGE (บาท):</h6>
+                    </div>
+                    <span>{{ number_format($doge_last_price,5,".", ",") }} บาท</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 class="my-0">ราคา XCN (บาท):</h6>
+                    </div>
+                    <span>{{ number_format($xcn_last_price,5,".", ",") }} บาท</span>
                 </li>
             </ul>
         </div>
@@ -42,6 +54,18 @@
     </div>
 </div>
 </div>
+
+<div class="row" style="margin-top:10px">
+    <div class="col-md-12">
+        <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading">หมายเหตุ</h4>
+            <p>- ราคาที่แสดง เป็นราคาประมาณ Market Price Order ที่อยู่บนสุด หมายความว่า กดซื้อขายได้ทันที</p>
+            <hr>
+            <p>- เป็นราคา Real-time โดยประมาณ</p>
+        </div>
+    </div>
+</div>
+
 <!-- HBX -->
 <div class="row" style="margin-top:0px">
 <div class="col-md-6">

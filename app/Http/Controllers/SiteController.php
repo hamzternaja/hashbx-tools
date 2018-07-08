@@ -40,6 +40,8 @@ class SiteController extends Controller
 
         $btc_last_price = $output_arr[1]["last_price"];     // BTC
         $bch_last_price = $output_arr[27]["last_price"];    // BCH
+        $doge_last_price = $output_arr[4]["last_price"] * $btc_last_price;    // DOGE
+        $xcn_last_price = $output_arr[15]["last_price"] * $btc_last_price ;    // XCN
 
         // ------------------------------ Token/BTC ------------------------------
         $output = $this->curlGet('https://hashbx.io/exchange/Token/BTC');
@@ -105,6 +107,8 @@ class SiteController extends Controller
             'time_text' => thaidate("วันlที่ j F H:i น.", time()),
             'btc_last_price' => $btc_last_price,
             'bch_last_price' => $bch_last_price,
+            'doge_last_price' => $doge_last_price,
+            'xcn_last_price' => $xcn_last_price,
 
             'token_per_btc_buy_rate' => $token_per_btc_buy_rate,
             'buy_token_by_btc' => $buy_token_by_btc,
@@ -133,6 +137,8 @@ class SiteController extends Controller
 
         $btc_last_price = $output_arr[1]["last_price"];     // BTC
         $bch_last_price = $output_arr[27]["last_price"];    // BCH
+        $doge_last_price = $output_arr[4]["last_price"] * $btc_last_price;    // DOGE
+        $xcn_last_price = $output_arr[15]["last_price"] * $btc_last_price ;    // XCN
 
         // ------------------------------ Token/BTC ------------------------------
         $output = $this->curlGet('https://hashbx.io/exchange/Token/BTC');
@@ -176,6 +182,50 @@ class SiteController extends Controller
             $sell_token_by_bch = $bch_last_price / $token_per_bch_sell_rate;
         }
 
+        // ------------------------------ Token/DOGE ------------------------------
+        $output = $this->curlGet('https://hashbx.io/exchange/Token/DOGE');
+        $packtPageXpath = $this->returnXPathObject($output);	// Instantiating new XPath DOM object
+
+        $elements = $packtPageXpath->query('//*[@id="order_buy"]/tr[1]/td[3]');	// Querying for <h1> (title of book)
+
+        $token_per_doge_buy_rate = 0.0;
+        $buy_token_by_doge = 0.0;
+        if (!is_null($elements)) {
+            $token_per_doge_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
+            $buy_token_by_doge = $doge_last_price / $token_per_doge_buy_rate;
+        }
+
+        $elements = $packtPageXpath->query('//*[@id="order_sell"]/tr[1]/td[1]');	// Querying for <h1> (title of book)
+
+        $token_per_doge_sell_rate = 0.0;
+        $sell_token_by_doge = 0.0;
+        if (!is_null($elements)) {
+            $token_per_doge_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
+            $sell_token_by_doge = $doge_last_price / $token_per_doge_sell_rate;
+        }
+
+        // ------------------------------ Token/XCN ------------------------------
+        $output = $this->curlGet('https://hashbx.io/exchange/Token/XCN');
+        $packtPageXpath = $this->returnXPathObject($output);	// Instantiating new XPath DOM object
+
+        $elements = $packtPageXpath->query('//*[@id="order_buy"]/tr[1]/td[3]');	// Querying for <h1> (title of book)
+
+        $token_per_xcn_buy_rate = 0.0;
+        $buy_token_by_xcn = 0.0;
+        if (!is_null($elements)) {
+            $token_per_xcn_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
+            $buy_token_by_xcn = $xcn_last_price / $token_per_xcn_buy_rate;
+        }
+
+        $elements = $packtPageXpath->query('//*[@id="order_sell"]/tr[1]/td[1]');	// Querying for <h1> (title of book)
+
+        $token_per_xcn_sell_rate = 0.0;
+        $sell_token_by_xcn = 0.0;
+        if (!is_null($elements)) {
+            $token_per_xcn_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
+            $sell_token_by_xcn = $xcn_last_price / $token_per_xcn_sell_rate;
+        }
+
         
 
         return view('token', [
@@ -192,6 +242,16 @@ class SiteController extends Controller
             'buy_token_by_bch' => $buy_token_by_bch,
             'token_per_bch_sell_rate' => $token_per_bch_sell_rate,
             'sell_token_by_bch' => $sell_token_by_bch,
+
+            'token_per_doge_buy_rate' => $token_per_doge_buy_rate,
+            'buy_token_by_doge' => $buy_token_by_doge,
+            'token_per_doge_sell_rate' => $token_per_doge_sell_rate,
+            'sell_token_by_doge' => $sell_token_by_doge,
+
+            'token_per_xcn_buy_rate' => $token_per_xcn_buy_rate,
+            'buy_token_by_xcn' => $buy_token_by_xcn,
+            'token_per_xcn_sell_rate' => $token_per_xcn_sell_rate,
+            'sell_token_by_xcn' => $sell_token_by_xcn,
         ]);
     }
 
@@ -287,5 +347,10 @@ class SiteController extends Controller
             // 'buy_token_by_hbx' => $buy_token_by_hbx,
             // 'sell_token_by_hbx' => $sell_token_by_hbx,
         ]);
+    }
+
+    public function faq(Request $request)
+    {
+        return view('faq');
     }
 }
