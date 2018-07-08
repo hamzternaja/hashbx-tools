@@ -1,58 +1,116 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+# บทนำ #
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+ระบบ HASHBX.IO Analysis Tools เขียนด้วย Laravel 5.5
 
-## About Laravel
+Web App : [http://hashbx.porrapat.com](http://hashbx.porrapat.com)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+## เป้าหมายการพัฒนา ##
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+* เพิ่มส่งเสริมการลงทุนในบริษัท HASHBX ทุกผลิตภัณฑ์ที่เกี่ยวข้องกับบริษัทเช่น ICO และ แรงขุดต่างๆ กับ วงการคริปโต Currency ที่เกี่ยวข้อง
+* พัฒนาเป็นระบบให้ความรู้แนะนำการลงทุน และ Arbitrate System โดยมีต้นตอจาก HASHBX เป็นหลัก
+* เพื่อฝึกเขียนโปรแกรมเป็น Open Source นักพัฒนาท่านอื่นๆ สามารถ Fork Code ผ่าน Github และใช้ได้ ไม่จำกัด ท่านอาจตั้ง Server แล้วใช้ส่วนตัวของท่านเองได้
+* สร้าง Community นักลงทุน HASHBX และพันธมิตรให้แข็งแกร่งยิ่งขึ้น
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
+## ที่มาของข้อมูล ##
+* [HASHBX.IO](http://www.hashbx.io)
+* [BX.IN.TH](http://bx.in.th)
 
-## Learning Laravel
+## แรงบันดาลใจ ##
+* [Arbitrate Bot CryptoVationX](https://arbot.cryptovation.co/)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
+## ข้อควรระวัง ##
+เว็บนี้เพียงแค่ดึงข้อมูลจากต้นทาง และ ให้คำแนะนำ โปรดเช็คข้อมูลราคาที่แท้จริง และ ตรวจสอบการคำนวณค่าเงินต่างๆ ด้วยตัวท่านเองอีกรอบ ก่อนลงทุน หรือ เทรดทุกครั้ง ถ้ามีข้อผิดพลาด หรือ คำแนะนำเพิ่มเติม โปรดติดต่อมา เราจะปรับปรุงแก้ไขให้ดีที่สุดครับ
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+## หากท่านต้องการสนับสนุน ##
+ณ เวลานี้ เราต้องการกระจาย เครื่องมือนี้ไปยังผู้ใช้ให้ได้มากที่สุด เพื่อให้ทุนท่านได้ใช้งานกัน และ มั่นใจในการลงทุนกับ HASHBX มากยิ่งขึ้น เพราะที่สุดแล้ว ทุกคนมีส่วนร่วมในการพัฒนาบริษัท และ วงการคริปโต Currency
 
-## Laravel Sponsors
+สรุปง่ายๆ ถ้าคนเข้าใช้เยอะๆ หุ้นที่ผมถืออยู่ก็ MOON นั่นเอง ไม่ต้องคิดไรครับ ตอนนี้ สบายๆ
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
+## เกี่ยวกับระบบ ##
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Pulse Storm](http://www.pulsestorm.net/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
+พัฒนามาจาก Laravel Template Version 5.5 อ้างอิง [ที่นี่](https://github.com/laravel/laravel/tree/5.5)
 
-## Contributing
+### ความต้องการของระบบพื้นฐาน ###
+* ถ้าพัฒนาบน Windows ใช้ XAMPP 7.1.9
+* PHP 7+ เท่านั้น
+* PHP curl extension (จำเป็นต้องติดตั้ง เพราะมีการดึงข้อมูลโดยใช้ Library php_curl)
+* Database MariaDB (MySQL) (ยังไม่มีการเชื่อมฐานข้อมูล แต่จะจัดทำในอนาคต)
+* ตัวติดตั้ง Composer
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### วิธีการติดตั้ง ###
 
-## Security Vulnerabilities
+* ติดตั้ง Web Server (Apache), PHP, MySQL ก่อน
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```
+git clone <git-url> hashbx-tools
+cd 
+composer install # หรือ composer_update
+```
 
-## License
+```
+php artisan key:generate # สร้าง key
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+รัน Server ทดสอบ (กรณีไม่ Set Virtual Host)
+```
+php artisan serve
+
+หรือ
+
+php artisan serve --port=8080
+```
+
+* หรือทำ Virtual Host Web Server สำหรับ Apache บน Windows (ระบบปฏิบัติการอื่น ก็ปรับเปลี่ยนไปตามความเหมาะสม)
+
+สร้างไฟล์ .env หรือ Copy มาจาก .evn.example
+
+
+# การไปติดตั้งบน Production
+
+อย่าลืม เปลี่ยน APP_DEBUG=false ด้วยครับ เพราะจะทำให้ประสิทธิภาพโปรแกรมเพิ่มขึ้น
+
+```
+APP_NAME=HASHBX_TOOLS
+APP_DEBUG=false
+```
+
+ที่ไฟล์ C:\Windows\System32\drivers\etc\hosts
+
+```
+127.0.0.1 hashbx-tools.local
+```
+
+ที่ไฟล์ httpd-vhosts.conf
+
+```
+<VirtualHost *:80>
+    DocumentRoot "C:/xampp/htdocs"
+    ServerName localhost
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/xampp/htdocs/hashbx-tools/public"
+    ServerName hashbx-tools.local
+</VirtualHost>
+```
+
+* สำหรับการใช้งานบน NGINX ให้ติดตั้ง Package php-fpm เวอร์ชั่น 5.5 ขึ้นไป พร้อมเปิดพอร์ตที่ 9000 และตั้งค่าไฟล์ server block ตามนี้
+```
+server {
+  server_name your_name;
+  index index.php;
+  root /path/to/your/hashbx-tools/public;
+  
+  location / {
+    try_files $uri $uri/ /index.php?$query_string;
+  }
+  error_page 404 /index.php;
+
+  location ~ \.php$ {
+    fastcgi_split_path_info ^(.+\.php)(/.+)$;
+    fastcgi_pass 127.0.0.1:9000;
+    fastcgi_index index.php;
+    include fastcgi_params;
+  }
+}
+```
