@@ -55,16 +55,16 @@
 </div>
 </div>
 
-<div class="row" style="margin-top:10px">
+<!-- <div class="row" style="margin-top:10px">
     <div class="col-md-12">
         <div class="alert alert-danger" role="alert">
             <h4 class="alert-heading">หมายเหตุ</h4>
-            <p>- ราคาที่แสดง เป็นราคาประมาณ Market Price Order ที่อยู่บนสุด หมายความว่า กดซื้อขายได้ทันที</p>
+            <p>- ราคาที่แสดง เป็นราคาประมาณ Market Price Order ที่อยู่บนสุด กดซื้อขายได้ทันที</p>
             <hr>
-            <p>- เป็นราคา Real-time โดยประมาณ</p>
+            <p>- เป็นราคา Real-time โดยประมาณ โปรดกด F5 เพื่อ Refresh</p>
         </div>
     </div>
-</div>
+</div> -->
 
 <!-- HBX -->
 <div class="row" style="margin-top:0px">
@@ -83,7 +83,7 @@
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
-                        <h6 class="my-0">ซื้อ HBX ด้วย Token ที่ฝากด้วย BTC : </h6>
+                        <h6 class="my-0">ซื้อ HBX ด้วย Token ที่ฝากด้วย BTC (ทันที): </h6>
                     </div>
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
@@ -94,7 +94,18 @@
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
-                        <h6 class="my-0">ซื้อ HBX ด้วย Token ที่ฝากด้วย BCH : </h6>
+                        <h6 class="my-0">ซื้อ HBX ด้วย Token ที่ฝากด้วย BTC (ตั้งขายเอง): </h6>
+                    </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 class="my-0">{{ number_format( $token_per_hbx_sell_rate ,2,".", ",") }} * {{ number_format( $sell_token_by_btc ,2,".", ",") }} = </h6>
+                    </div>
+                    <span class="text-success">{{ number_format( $token_per_hbx_sell_rate * $sell_token_by_btc,2,".", ",") }} บาท</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 class="my-0">ซื้อ HBX ด้วย Token ที่ฝากด้วย BCH (ทันที): </h6>
                     </div>
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
@@ -102,6 +113,17 @@
                         <h6 class="my-0">{{ number_format( $token_per_hbx_sell_rate ,2,".", ",") }} * {{ number_format( $buy_token_by_bch ,2,".", ",") }} = </h6>
                     </div>
                     <span class="text-success">{{ number_format( $token_per_hbx_sell_rate * $buy_token_by_bch,2,".", ",") }} บาท</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 class="my-0">ซื้อ HBX ด้วย Token ที่ฝากด้วย BCH (ตั้งขายเอง): </h6>
+                    </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 class="my-0">{{ number_format( $token_per_hbx_sell_rate ,2,".", ",") }} * {{ number_format( $sell_token_by_bch ,2,".", ",") }} = </h6>
+                    </div>
+                    <span class="text-success">{{ number_format( $token_per_hbx_sell_rate * $sell_token_by_bch,2,".", ",") }} บาท</span>
                 </li>
             </ul>
         </div>
@@ -122,7 +144,7 @@
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
-                        <h6 class="my-0">ขาย HBX เป็น Token แล้วถอนด้วย BTC : </h6>
+                        <h6 class="my-0">ขาย HBX เป็น Token แล้วถอนด้วย BTC (ทันที): </h6>
                     </div>
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
@@ -133,7 +155,18 @@
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
-                        <h6 class="my-0">ขาย HBX เป็น Token แล้วถอนด้วย BCH : </h6>
+                        <h6 class="my-0">ขาย HBX เป็น Token แล้วถอนด้วย BTC (ตั้งขายเอง): </h6>
+                    </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 class="my-0">{{ number_format( $token_per_hbx_buy_rate ,2,".", ",") }} * {{ number_format( $buy_token_by_btc ,2,".", ",") }} = </h6>
+                    </div>
+                    <span class="text-danger">{{ number_format( $token_per_hbx_buy_rate * $buy_token_by_btc,2,".", ",") }} บาท</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 class="my-0">ขาย HBX เป็น Token แล้วถอนด้วย BCH (ทันที): </h6>
                     </div>
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
@@ -141,6 +174,17 @@
                         <h6 class="my-0">{{ number_format( $token_per_hbx_buy_rate ,2,".", ",") }} * {{ number_format( $sell_token_by_bch ,2,".", ",") }} = </h6>
                     </div>
                     <span class="text-danger">{{ number_format( $token_per_hbx_buy_rate * $sell_token_by_bch,2,".", ",") }} บาท</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 class="my-0">ขาย HBX เป็น Token แล้วถอนด้วย BCH (ตั้งขายเอง): </h6>
+                    </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 class="my-0">{{ number_format( $token_per_hbx_buy_rate ,2,".", ",") }} * {{ number_format( $buy_token_by_bch ,2,".", ",") }} = </h6>
+                    </div>
+                    <span class="text-danger">{{ number_format( $token_per_hbx_buy_rate * $buy_token_by_bch,2,".", ",") }} บาท</span>
                 </li>
             </ul>
         </div>
