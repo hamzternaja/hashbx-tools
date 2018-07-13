@@ -463,6 +463,90 @@ class SiteController extends Controller
         ]);
     }
 
+    public function whaleCalculator(Request $request)
+    {
+        // ------------------------ BX Data ------------------------------------------------
+
+        $output = $this->curlGet('https://bx.in.th/api/');
+
+        $output_arr = json_decode($output, true);
+
+        $btc_last_price = $output_arr[1]["last_price"];     // BTC
+        $bch_last_price = $output_arr[27]["last_price"];    // BCH
+
+        // ------------------------------ Token/BTC ------------------------------
+        $output = $this->curlGet('https://hashbx.io/exchange/Token/BTC');
+        $packtPageXpath = $this->returnXPathObject($output);	// Instantiating new XPath DOM object
+        $elements = $packtPageXpath->query('//*[@id="order_buy"]/tr[1]/td[3]');	// Querying for <h1> (title of book)
+        $token_per_btc_buy_rate = 0.0;
+        $buy_token_by_btc = 0.0;
+        if (!is_null($elements)) {
+            $token_per_btc_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
+            $buy_token_by_btc = $btc_last_price / $token_per_btc_buy_rate;
+        }
+
+        $elements = $packtPageXpath->query('//*[@id="order_sell"]/tr[1]/td[1]');	// Querying for <h1> (title of book)
+
+        $token_per_btc_sell_rate = 0.0;
+        $sell_token_by_btc = 0.0;
+        if (!is_null($elements)) {
+            $token_per_btc_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
+            $sell_token_by_btc = $btc_last_price / $token_per_btc_sell_rate;
+        }
+
+        // ------------------------------ Token/BCH ------------------------------
+        $output = $this->curlGet('https://hashbx.io/exchange/Token/BCH');
+        $packtPageXpath = $this->returnXPathObject($output);	// Instantiating new XPath DOM object
+
+        $elements = $packtPageXpath->query('//*[@id="order_buy"]/tr[1]/td[3]');	// Querying for <h1> (title of book)
+
+        $token_per_bch_buy_rate = 0.0;
+        $buy_token_by_bch = 0.0;
+        if (!is_null($elements)) {
+            $token_per_bch_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
+            $buy_token_by_bch = $bch_last_price / $token_per_bch_buy_rate;
+        }
+
+        $elements = $packtPageXpath->query('//*[@id="order_sell"]/tr[1]/td[1]');	// Querying for <h1> (title of book)
+
+        $token_per_bch_sell_rate = 0.0;
+        $sell_token_by_bch = 0.0;
+        if (!is_null($elements)) {
+            $token_per_bch_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
+            $sell_token_by_bch = $bch_last_price / $token_per_bch_sell_rate;
+        }
+
+        // ------------------------------ Token/HBX ------------------------------
+        $output = $this->curlGet('https://hashbx.io/exchange/Token/HBX');
+        $packtPageXpath = $this->returnXPathObject($output);	// Instantiating new XPath DOM object
+
+        $elements = $packtPageXpath->query('//*[@id="order_buy"]/tr[1]/td[3]');	// Querying for <h1> (title of book)
+
+        $token_per_hbx_buy_rate = 0.0;
+        if (!is_null($elements)) {
+            $token_per_hbx_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
+        }
+
+        $elements = $packtPageXpath->query('//*[@id="order_sell"]/tr[1]/td[1]');	// Querying for <h1> (title of book)
+
+        $token_per_hbx_sell_rate = 0.0;
+        if (!is_null($elements)) {
+            $token_per_hbx_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
+        }
+        // ------------------------------ END Token/HBX -----------------------------
+
+        return view('whale-calculator', [
+            'time_text' => thaidate("วันlที่ j F H:i น.", time()),
+            'btc_last_price' => $btc_last_price,
+            'bch_last_price' => $bch_last_price,
+
+            'hbx_max_last_price' => max($token_per_hbx_sell_rate * $buy_token_by_btc, $token_per_hbx_sell_rate * $buy_token_by_bch),
+
+            // 'token_per_hbx_buy_rate' => $token_per_hbx_buy_rate,
+            // 'token_per_hbx_sell_rate' => $token_per_hbx_sell_rate,
+        ]);
+    }
+
     public function faq(Request $request)
     {
         return view('faq');
