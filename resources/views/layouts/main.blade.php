@@ -14,7 +14,7 @@
 <body>
 
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <a class="navbar-brand" href="/">HASHBX.IO Tools 1.0</a>
+        <a class="navbar-brand" href="/">HASHBX.IO Tools 1.1</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
