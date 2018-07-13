@@ -50,7 +50,11 @@
                         <ul>
                             <li>คุณมีกี่ HBX ตอนนี้</li>
                             <li>ตอนถึงเป้าหมาของคุณ คุณว่าราคา HBX จะเท่ากับกี่บาท</li>
+                            <li>ติ้กตัวเลือก ให้หารราคาลง 2 เท่าทุกครั้ง กรณีที่ต้องการความสมจริง</li>
                         </ul>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" v-model="price_div_check">หารราคาแต่ละรอบลงด้วย
+                        </div>
                     </div>
                 </div>
             </div>
@@ -75,67 +79,67 @@
                         <tr>
                             <td class="text-center">7/8/2018 (2)</th>
                             <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="hbx * 2"></td>
-                            <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price_per_hbx"></td>
+                            <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price_div_check ? price_per_hbx / 2.00 : price_per_hbx"></td>
                             <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price2"></td>
                         </tr>
                         <tr>
                             <td class="text-center">7/9/2018 (3)</th>
                             <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="hbx * 4"></td>
-                            <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price_per_hbx"></td>
+                            <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price_div_check ? price_per_hbx / 4.00 : price_per_hbx"></td>
                             <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price3"></td>
                         </tr>
                         <tr>
                             <td class="text-center">7/10/2018 (4)</th>
                             <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="hbx * 8"></td>
-                            <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price_per_hbx"></td>
+                            <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price_div_check ? price_per_hbx / 8.00 : price_per_hbx"></td>
                             <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price4"></td>
                         </tr>
                         <tr>
                             <td class="text-center">7/11/2018 (5)</th>
                             <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="hbx * 16"></td>
-                            <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price_per_hbx"></td>
+                            <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price_div_check ? price_per_hbx / 16.00 : price_per_hbx"></td>
                             <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price5"></td>
                         </tr>
                         <tr>
                             <td class="text-center">7/12/2018 (6)</th>
                             <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="hbx * 32"></td>
-                            <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price_per_hbx"></td>
+                            <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price_div_check ? price_per_hbx / 32.00 : price_per_hbx"></td>
                             <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price6"></td>
                         </tr>
                         <tr>
                             <td class="text-center">7/1/2019 (7)</th>
                             <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="hbx * 64"></td>
-                            <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price_per_hbx"></td>
+                            <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price_div_check ? price_per_hbx / 64.00 : price_per_hbx"></td>
                             <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price7"></td>
                         </tr>
                         <tr>
                             <td class="text-center">7/2/2019 (8)</th>
                             <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="hbx * 128"></td>
-                            <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price_per_hbx"></td>
+                            <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price_div_check ? price_per_hbx / 128.00 : price_per_hbx"></td>
                             <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price8"></td>
                         </tr>
                         <tr>
                             <td class="text-center">7/3/2019 (9)</th>
                             <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="hbx * 256"></td>
-                            <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price_per_hbx"></td>
+                            <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price_div_check ? price_per_hbx / 256.00 : price_per_hbx"></td>
                             <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price9"></td>
                         </tr>
                         <tr>
                             <td class="text-center">7/4/2019 (10)</th>
                             <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="hbx * 512"></td>
-                            <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price_per_hbx"></td>
+                            <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price_div_check ? price_per_hbx / 512.00 : price_per_hbx"></td>
                             <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price10"></td>
                         </tr>
                         <tr>
                             <td class="text-center">7/5/2019 (11)</th>
                             <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="hbx * 1024"></td>
-                            <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price_per_hbx"></td>
+                            <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price_div_check ? price_per_hbx / 1024.00 : price_per_hbx"></td>
                             <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price11"></td>
                         </tr>
                         <tr>
                             <td class="text-center">7/6/2019 (12)</th>
                             <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="hbx * 2048"></td>
-                            <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price_per_hbx"></td>
+                            <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price_div_check ? price_per_hbx / 2048.00 : price_per_hbx"></td>
                             <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price12"></td>
                         </tr>
                     </tbody>
@@ -163,43 +167,44 @@
         data: {
             hbx: 1,
             price_per_hbx: {{ number_format($hbx_max_last_price,2) }},
+            price_div_check: false
         },
         computed: {
             price1: function () {
-                return this.hbx * this.price_per_hbx;
+                return this.price_div_check ? this.hbx * this.price_per_hbx : this.hbx * this.price_per_hbx;
             },
             price2: function () {
-                return this.hbx * 2 * this.price_per_hbx;
+                return this.price_div_check ? this.hbx * this.price_per_hbx : this.hbx * 2 * this.price_per_hbx;
             },
             price3: function () {
-                return this.hbx * 4 * this.price_per_hbx;
+                return this.price_div_check ? this.hbx * this.price_per_hbx : this.hbx * 4 * this.price_per_hbx;
             },
             price4: function () {
-                return this.hbx * 8 * this.price_per_hbx;
+                return this.price_div_check ? this.hbx * this.price_per_hbx : this.hbx * 8 * this.price_per_hbx;
             },
             price5: function () {
-                return this.hbx * 16 * this.price_per_hbx;
+                return this.price_div_check ? this.hbx * this.price_per_hbx : this.hbx * 16 * this.price_per_hbx;
             },
             price6: function () {
-                return this.hbx * 32 * this.price_per_hbx;
+                return this.price_div_check ? this.hbx * this.price_per_hbx : this.hbx * 32 * this.price_per_hbx;
             },
             price7: function () {
-                return this.hbx * 64 * this.price_per_hbx;
+                return this.price_div_check ? this.hbx * this.price_per_hbx : this.hbx * 64 * this.price_per_hbx;
             },
             price8: function () {
-                return this.hbx * 128 * this.price_per_hbx;
+                return this.price_div_check ? this.hbx * this.price_per_hbx : this.hbx * 128 * this.price_per_hbx;
             },
             price9: function () {
-                return this.hbx * 256 * this.price_per_hbx;
+                return this.price_div_check ? this.hbx * this.price_per_hbx : this.hbx * 256 * this.price_per_hbx;
             },
             price10: function () {
-                return this.hbx * 512 * this.price_per_hbx;
+                return this.price_div_check ? this.hbx * this.price_per_hbx : this.hbx * 512 * this.price_per_hbx;
             },
             price11: function () {
-                return this.hbx * 1024 * this.price_per_hbx;
+                return this.price_div_check ? this.hbx * this.price_per_hbx : this.hbx * 1024 * this.price_per_hbx;
             },
             price12: function () {
-                return this.hbx * 2048 * this.price_per_hbx;
+                return this.price_div_check ? this.hbx * this.price_per_hbx : this.hbx * 2048 * this.price_per_hbx;
             }
         }
     })
