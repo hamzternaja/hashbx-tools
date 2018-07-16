@@ -406,6 +406,26 @@ class SiteController extends Controller
         // ------------------------------ END Token/UNITTHs ------------------------------
 
 
+        // ------------------------------ Token/DOGEGHs ------------------------------
+        $output = $this->curlGet('https://hashbx.io/exchange/Token/DOGEGHs');
+        $packtPageXpath = $this->returnXPathObject($output);	// Instantiating new XPath DOM object
+
+        $elements = $packtPageXpath->query('//*[@id="order_buy"]/tr[1]/td[3]');	// Querying for <h1> (title of book)
+
+        $token_per_dogeghs_buy_rate = 0.0;
+        if (!is_null($elements)) {
+            $token_per_dogeghs_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
+        }
+
+        $elements = $packtPageXpath->query('//*[@id="order_sell"]/tr[1]/td[1]');	// Querying for <h1> (title of book)
+
+        $token_per_dogeghs_sell_rate = 0.0;
+        if (!is_null($elements)) {
+            $token_per_dogeghs_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
+        }
+        // ------------------------------ END Token/DOGEGHs ------------------------------
+
+
         // ------------------------------ Token/ETCMHs ------------------------------
         $output = $this->curlGet('https://hashbx.io/exchange/Token/ETCMHs');
         $packtPageXpath = $this->returnXPathObject($output);	// Instantiating new XPath DOM object
@@ -456,7 +476,8 @@ class SiteController extends Controller
             'token_per_unitths_buy_rate' => $token_per_unitths_buy_rate,
             'token_per_unitths_sell_rate' => $token_per_unitths_sell_rate,
 
-            // DOGEGHs ยังไม่มีวางขาย เตรียมเพิ่มเร็วๆ นี้
+            'token_per_dogeghs_buy_rate' => $token_per_dogeghs_buy_rate,
+            'token_per_dogeghs_sell_rate' => $token_per_dogeghs_sell_rate,
 
             'token_per_etcmhs_buy_rate' => $token_per_etcmhs_buy_rate,
             'token_per_etcmhs_sell_rate' => $token_per_etcmhs_sell_rate,

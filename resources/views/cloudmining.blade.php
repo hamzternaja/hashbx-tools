@@ -461,6 +461,90 @@
 </div>
 <!-- END UNITTHs -->
 
+<!-- DOGEGHs -->
+<div class="row" style="margin-top:0px">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                ราคาซื้อ DOGEGHs ด้วย Token
+            </div>
+            <div class="card-body">
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">Buy Rate :</h6>
+                        </div>
+                        <span>{{ number_format($token_per_dogeghs_sell_rate,2,".", ",") }} Token/DOGEGHs</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">ซื้อ DOGEGHs ด้วย Token ที่ฝากด้วย BTC : </h6>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">{{ number_format( $token_per_dogeghs_sell_rate ,2,".", ",") }} * {{ number_format( $buy_token_by_btc ,2,".", ",") }} = </h6>
+                        </div>
+                        <span class="text-success">{{ number_format( $token_per_dogeghs_sell_rate * $buy_token_by_btc,2,".", ",") }} บาท</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">ซื้อ DOGEGHs ด้วย Token ที่ฝากด้วย BCH : </h6>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">{{ number_format( $token_per_dogeghs_sell_rate ,2,".", ",") }} * {{ number_format( $buy_token_by_bch ,2,".", ",") }} = </h6>
+                        </div>
+                        <span class="text-success">{{ number_format( $token_per_dogeghs_sell_rate * $buy_token_by_bch,2,".", ",") }} บาท</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                ราคาขาย DOGEGHs เป็น Token
+            </div>
+            <div class="card-body">
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">Sell Rate :</h6>
+                        </div>
+                        <span>{{ number_format($token_per_dogeghs_buy_rate,2,".", ",") }} Token/DOGEGHs</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">ขาย DOGEGHs เป็น Token แล้วถอนด้วย BTC : </h6>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">{{ number_format( $token_per_dogeghs_buy_rate ,2,".", ",") }} * {{ number_format( $sell_token_by_btc ,2,".", ",") }} = </h6>
+                        </div>
+                        <span class="text-danger">{{ number_format( $token_per_dogeghs_buy_rate * $sell_token_by_btc,2,".", ",") }} บาท</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">ขาย DOGEGHs เป็น Token แล้วถอนด้วย BCH : </h6>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">{{ number_format( $token_per_dogeghs_buy_rate ,2,".", ",") }} * {{ number_format( $sell_token_by_bch ,2,".", ",") }} = </h6>
+                        </div>
+                        <span class="text-danger">{{ number_format( $token_per_dogeghs_buy_rate * $sell_token_by_bch,2,".", ",") }} บาท</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END DOGEGHs -->
+
+
 
 <!-- ETCMHs -->
 <div class="row" style="margin-top:0px">
@@ -545,15 +629,6 @@
 </div>
 <!-- END ETCMHs -->
 
-
-<div class="row" style="margin-top:10px">
-    <div class="col-md-12">
-        <div class="alert alert-danger" role="alert">
-            <h4 class="alert-heading">หมายเหตุ</h4>
-            <p>- DOGEGHs ยังไม่มีวางขาย เตรียมเพิ่มเร็วๆ นี้</p>
-        </div>
-    </div>
-</div>
 
     
 @endsection
