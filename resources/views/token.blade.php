@@ -175,7 +175,7 @@
                     </li>
                     <li class="list-group-item d-flex justify-content-between lh-condensed">
                         <div>
-                            <h6 class="my-0">ซื้อ Token ด้วย DOGE : <span class="text-danger">* ยังไม่มีแรงขุด Doge</span></h6>
+                            <h6 class="my-0">ซื้อ Token ด้วย DOGE : </h6>
                         </div>
                         <span>{{ number_format($buy_token_by_doge,5,".", ",") }} บาท</span>
                     </li>
@@ -198,7 +198,7 @@
                     </li>
                     <li class="list-group-item d-flex justify-content-between lh-condensed">
                         <div>
-                            <h6 class="my-0">ขาย Token เพื่อรับ DOGE : <span class="text-danger">* ตัวเลือกออกระบบได้</span></h6>
+                            <h6 class="my-0">ขาย Token เพื่อรับ DOGE : </h6>
                         </div>
                         <span>{{ number_format($sell_token_by_doge,5,".", ",") }} บาท</span>
                     </li>
@@ -226,7 +226,7 @@
                     </li>
                     <li class="list-group-item d-flex justify-content-between lh-condensed">
                         <div>
-                            <h6 class="my-0">ซื้อ Token ด้วย XCN : <span class="text-danger">* ต้องขุดจากแรงขุด XCN</span></h6>
+                            <h6 class="my-0">ซื้อ Token ด้วย XCN : </h6>
                         </div>
                         <span>{{ number_format($buy_token_by_xcn,5,".", ",") }} บาท</span>
                     </li>
@@ -249,7 +249,7 @@
                     </li>
                     <li class="list-group-item d-flex justify-content-between lh-condensed">
                         <div>
-                            <h6 class="my-0">ขาย Token เพื่อรับ XCN : <span class="text-danger">* โอนออกได้ แต่ขาดทุน</span></h6>
+                            <h6 class="my-0">ขาย Token เพื่อรับ XCN : </h6>
                         </div>
                         <span>{{ number_format($sell_token_by_xcn,5,".", ",") }} บาท</span>
                     </li>
