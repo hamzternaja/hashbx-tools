@@ -49,7 +49,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                ราคาซื้อ Token ด้วย BTC
+                ราคาซื้อ Token ด้วย BTC (<a href="https://hashbx.io/exchange/Token/BTC" target="_blank">Go Trade</a>)
             </div>
             <div class="card-body">
                 <ul class="list-group mb-3">
@@ -72,7 +72,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                ราคาขาย Token เป็น BTC
+                ราคาขาย Token เป็น BTC (<a href="https://hashbx.io/exchange/Token/BTC" target="_blank">Go Trade</a>)
             </div>
             <div class="card-body">
                 <ul class="list-group mb-3">
@@ -100,7 +100,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                ราคาซื้อ Token ด้วย BCH
+                ราคาซื้อ Token ด้วย BCH (<a href="https://hashbx.io/exchange/Token/BCH" target="_blank">Go Trade</a>)
             </div>
             <div class="card-body">
                 <ul class="list-group mb-3">
@@ -123,7 +123,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                ราคาขาย Token เป็น BCH
+                ราคาขาย Token เป็น BCH (<a href="https://hashbx.io/exchange/Token/BCH" target="_blank">Go Trade</a>)
             </div>
             <div class="card-body">
                 <ul class="list-group mb-3">
@@ -163,7 +163,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                ราคาซื้อ Token ด้วย DOGE
+                ราคาซื้อ Token ด้วย DOGE (<a href="https://hashbx.io/exchange/Token/DOGE" target="_blank">Go Trade</a>)
             </div>
             <div class="card-body">
                 <ul class="list-group mb-3">
@@ -186,7 +186,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                ราคาขาย Token เป็น DOGE
+                ราคาขาย Token เป็น DOGE (<a href="https://hashbx.io/exchange/Token/DOGE" target="_blank">Go Trade</a>)
             </div>
             <div class="card-body">
                 <ul class="list-group mb-3">
@@ -214,7 +214,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                ราคาซื้อ Token ด้วย XCN
+                ราคาซื้อ Token ด้วย XCN (<a href="https://hashbx.io/exchange/Token/XCN" target="_blank">Go Trade</a>)
             </div>
             <div class="card-body">
                 <ul class="list-group mb-3">
@@ -237,7 +237,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                ราคาขาย Token เป็น XCN
+                ราคาขาย Token เป็น XCN (<a href="https://hashbx.io/exchange/Token/XCN" target="_blank">Go Trade</a>)
             </div>
             <div class="card-body">
                 <ul class="list-group mb-3">

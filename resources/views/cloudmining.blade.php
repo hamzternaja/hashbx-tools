@@ -48,7 +48,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                ราคาซื้อ HBX ด้วย Token
+                ราคาซื้อ HBX ด้วย Token (<a href="https://hashbx.io/exchange/Token/HBX" target="_blank">Go Trade</a>)
             </div>
             <div class="card-body">
                 <ul class="list-group mb-3">
@@ -87,7 +87,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                ราคาขาย HBX เป็น Token
+                ราคาขาย HBX เป็น Token (<a href="https://hashbx.io/exchange/Token/HBX" target="_blank">Go Trade</a>)
             </div>
             <div class="card-body">
                 <ul class="list-group mb-3">
@@ -131,7 +131,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                ราคาซื้อ BCHTHs ด้วย Token
+                ราคาซื้อ BCHTHs ด้วย Token (<a href="https://hashbx.io/exchange/Token/BCHTHs" target="_blank">Go Trade</a>)
             </div>
             <div class="card-body">
                 <ul class="list-group mb-3">
@@ -170,7 +170,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                ราคาขาย BCHTHs เป็น Token
+                ราคาขาย BCHTHs เป็น Token (<a href="https://hashbx.io/exchange/Token/BCHTHs" target="_blank">Go Trade</a>)
             </div>
             <div class="card-body">
                 <ul class="list-group mb-3">
@@ -215,7 +215,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                ราคาซื้อ XCNMHs ด้วย Token
+                ราคาซื้อ XCNMHs ด้วย Token (<a href="https://hashbx.io/exchange/Token/XCNMHs" target="_blank">Go Trade</a>)
             </div>
             <div class="card-body">
                 <ul class="list-group mb-3">
@@ -254,7 +254,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                ราคาขาย XCNMHs เป็น Token
+                ราคาขาย XCNMHs เป็น Token (<a href="https://hashbx.io/exchange/Token/XCNMHs" target="_blank">Go Trade</a>)
             </div>
             <div class="card-body">
                 <ul class="list-group mb-3">
@@ -299,7 +299,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                ราคาซื้อ XMRKHs ด้วย Token
+                ราคาซื้อ XMRKHs ด้วย Token (<a href="https://hashbx.io/exchange/Token/XMRKHs" target="_blank">Go Trade</a>)
             </div>
             <div class="card-body">
                 <ul class="list-group mb-3">
@@ -338,7 +338,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                ราคาขาย XMRKHs เป็น Token
+                ราคาขาย XMRKHs เป็น Token (<a href="https://hashbx.io/exchange/Token/XMRKHs" target="_blank">Go Trade</a>)
             </div>
             <div class="card-body">
                 <ul class="list-group mb-3">
@@ -383,7 +383,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                ราคาซื้อ UNITTHs ด้วย Token
+                ราคาซื้อ UNITTHs ด้วย Token (<a href="https://hashbx.io/exchange/Token/UNITTHs" target="_blank">Go Trade</a>)
             </div>
             <div class="card-body">
                 <ul class="list-group mb-3">
@@ -422,7 +422,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                ราคาขาย UNITTHs เป็น Token
+                ราคาขาย UNITTHs เป็น Token (<a href="https://hashbx.io/exchange/Token/UNITTHs" target="_blank">Go Trade</a>)
             </div>
             <div class="card-body">
                 <ul class="list-group mb-3">
@@ -466,7 +466,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                ราคาซื้อ DOGEGHs ด้วย Token
+                ราคาซื้อ DOGEGHs ด้วย Token (<a href="https://hashbx.io/exchange/Token/DOGEGHs" target="_blank">Go Trade</a>)
             </div>
             <div class="card-body">
                 <ul class="list-group mb-3">
@@ -505,7 +505,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                ราคาขาย DOGEGHs เป็น Token
+                ราคาขาย DOGEGHs เป็น Token (<a href="https://hashbx.io/exchange/Token/DOGEGHs" target="_blank">Go Trade</a>)
             </div>
             <div class="card-body">
                 <ul class="list-group mb-3">
@@ -551,7 +551,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                ราคาซื้อ ETCMHs ด้วย Token
+                ราคาซื้อ ETCMHs ด้วย Token (<a href="https://hashbx.io/exchange/Token/ETCMHs" target="_blank">Go Trade</a>)
             </div>
             <div class="card-body">
                 <ul class="list-group mb-3">
@@ -590,7 +590,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                ราคาขาย ETCMHs เป็น Token
+                ราคาขาย ETCMHs เป็น Token (<a href="https://hashbx.io/exchange/Token/ETCMHs" target="_blank">Go Trade</a>)
             </div>
             <div class="card-body">
                 <ul class="list-group mb-3">

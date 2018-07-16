@@ -71,7 +71,7 @@
 <div class="col-md-6">
     <div class="card">
         <div class="card-header">
-            ราคาซื้อ HBX ด้วย Token
+            ราคาซื้อ HBX ด้วย Token (<a href="https://hashbx.io/exchange/Token/HBX" target="_blank">Go Trade</a>)
         </div>
         <div class="card-body">
             <ul class="list-group mb-3">
@@ -132,7 +132,7 @@
 <div class="col-md-6">
     <div class="card">
         <div class="card-header">
-            ราคาขาย HBX เป็น Token
+            ราคาขาย HBX เป็น Token (<a href="https://hashbx.io/exchange/Token/HBX" target="_blank">Go Trade</a>)
         </div>
         <div class="card-body">
             <ul class="list-group mb-3">
@@ -196,7 +196,7 @@
 <div class="col-md-6">
     <div class="card">
         <div class="card-header">
-            ราคาซื้อ Token ด้วย BTC
+            ราคาซื้อ Token ด้วย BTC (<a href="https://hashbx.io/exchange/Token/BTC" target="_blank">Go Trade</a>)
         </div>
         <div class="card-body">
             <ul class="list-group mb-3">
@@ -219,7 +219,7 @@
 <div class="col-md-6">
     <div class="card">
         <div class="card-header">
-            ราคาขาย Token เป็น BTC
+            ราคาขาย Token เป็น BTC (<a href="https://hashbx.io/exchange/Token/BTC" target="_blank">Go Trade</a>)
         </div>
         <div class="card-body">
             <ul class="list-group mb-3">
@@ -244,7 +244,7 @@
 <div class="col-md-6">
     <div class="card">
         <div class="card-header">
-            ราคาซื้อ Token ด้วย BCH
+            ราคาซื้อ Token ด้วย BCH (<a href="https://hashbx.io/exchange/Token/BCH" target="_blank">Go Trade</a>)
         </div>
         <div class="card-body">
             <ul class="list-group mb-3">
@@ -267,7 +267,7 @@
 <div class="col-md-6">
     <div class="card">
         <div class="card-header">
-            ราคาขาย Token เป็น BCH
+            ราคาขาย Token เป็น BCH (<a href="https://hashbx.io/exchange/Token/BCH" target="_blank">Go Trade</a>)
         </div>
         <div class="card-body">
             <ul class="list-group mb-3">
