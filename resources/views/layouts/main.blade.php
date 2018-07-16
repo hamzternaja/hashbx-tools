@@ -48,6 +48,9 @@
                 <a class="nav-link" href="/about-us">About Us</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="/tips-and-tricks">Tips and Tricks</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="#">Quiz App</a>
             </li>
             <li class="nav-item">

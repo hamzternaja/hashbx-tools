@@ -577,4 +577,9 @@ class SiteController extends Controller
     {
         return view('aboutus');
     }
+
+    public function tipsAndTricks(Request $request)
+    {
+        return view('tips-and-tricks');
+    }
 }

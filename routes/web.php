@@ -18,3 +18,4 @@ Route::get('/whale-calculator', 'SiteController@whaleCalculator');
 
 Route::get('/faq', 'SiteController@faq');
 Route::get('/about-us', 'SiteController@aboutus');
+Route::get('/tips-and-tricks', 'SiteController@tipsAndTricks');
