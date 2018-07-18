@@ -35,6 +35,7 @@ Web App : [http://hashbx.porrapat.com](http://hashbx.porrapat.com)
 * ถ้าพัฒนาบน Windows ใช้ XAMPP 7.1.9
 * PHP 7+ เท่านั้น
 * PHP curl extension (จำเป็นต้องติดตั้ง เพราะมีการดึงข้อมูลโดยใช้ Library php_curl)
+* ขอขอบคุณ PHP ByPass CloudFlare Extension for curl [ที่นี่](https://github.com/KyranRana/cloudflare-bypass)
 * Database MariaDB (MySQL) (ยังไม่มีการเชื่อมฐานข้อมูล แต่จะจัดทำในอนาคต)
 * ตัวติดตั้ง Composer
 

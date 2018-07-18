@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>HASHBX.IO Analysis Tools 1.2</title>
+    <title>HASHBX.IO Analysis Tools 1.3</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
@@ -22,7 +22,7 @@
 <body>
 
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <a class="navbar-brand" href="/">HASHBX.IO Tools 1.2</a>
+        <a class="navbar-brand" href="/">HASHBX.IO Tools 1.3</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
