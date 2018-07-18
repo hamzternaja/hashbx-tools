@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use CloudflareBypass\RequestMethod\CFCurl;
 use Illuminate\Http\Request;
 use DomDocument;
 use DOMXPath;
@@ -25,7 +26,13 @@ class SiteController extends Controller
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         curl_setopt($ch, CURLOPT_USERAGENT,'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.13) Gecko/20080311 Firefox/2.0.0.13');
 
-        $results = curl_exec($ch);	// Executing cURL session
+        $curl_cf_wrapper = new CFCurl(array(
+            'cache'         => true,   // Caching now enabled by default; stores clearance tokens in Cache folder
+            'max_retries'   => 5       // Max attempts to try and get CF clearance
+        ));
+
+
+        $results = $curl_cf_wrapper->exec($ch);
         curl_close($ch);	// Closing cURL session
         return $results;	// Return the results
     }
