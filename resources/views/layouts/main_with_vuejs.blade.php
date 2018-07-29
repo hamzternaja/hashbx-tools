@@ -17,6 +17,44 @@
     <link rel="manifest" href="/icon/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+
+    <style>
+    html {
+        position: relative;
+        min-height: 100%;
+    }
+    body {
+        /* Margin bottom by footer height */
+        margin-bottom: 60px;
+    }
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        /* Set the fixed height of the footer here */
+        height: 60px;
+        line-height: 60px; /* Vertically center the text there */
+        background-color: #333333;
+    }
+
+
+    /* Custom page CSS
+    -------------------------------------------------- */
+    /* Not required for template or sticky footer method. */
+
+    body > .container {
+        padding: 60px 15px 0;
+    }
+
+    .footer > .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    code {
+        font-size: 80%;
+    }
+    </style>
 </head>
 
 <body>
@@ -61,6 +99,12 @@
     <div class="container" style="margin-top:30px">
         @yield('content')
     </div>
+
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">This page viewed {{ $view_count }} times. Request {{ $request_count }} time.</span>
+      </div>
+    </footer>
 
 </body>
 

@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use DomDocument;
 use DOMXPath;
 
+use HashBXCounter;
+
 class SiteController extends Controller
 {
     private function returnXPathObject($item)
@@ -111,6 +113,9 @@ class SiteController extends Controller
             $token_per_hbx_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
         }
 
+        HashBXCounter::counter_plus_one('view_count',1);
+        HashBXCounter::counter_plus_one('request_count',3);
+
         return view('welcome', [
             'time_text' => thaidate("วันlที่ j F H:i น.", time()),
             'btc_last_price' => $btc_last_price,
@@ -132,6 +137,9 @@ class SiteController extends Controller
             'token_per_hbx_sell_rate' => $token_per_hbx_sell_rate,
             // 'buy_token_by_hbx' => $buy_token_by_hbx,
             // 'sell_token_by_hbx' => $sell_token_by_hbx,
+
+            'view_count' => HashBXCounter::get_counter('view_count'),
+            'request_count' => HashBXCounter::get_counter('request_count')
         ]);
     }
 
@@ -235,7 +243,8 @@ class SiteController extends Controller
             $sell_token_by_xcn = $xcn_last_price / $token_per_xcn_sell_rate;
         }
 
-        
+        HashBXCounter::counter_plus_one('view_count',1);
+        HashBXCounter::counter_plus_one('request_count',4);
 
         return view('token', [
             'time_text' => thaidate("วันlที่ j F H:i น.", time()),
@@ -261,6 +270,9 @@ class SiteController extends Controller
             'buy_token_by_xcn' => $buy_token_by_xcn,
             'token_per_xcn_sell_rate' => $token_per_xcn_sell_rate,
             'sell_token_by_xcn' => $sell_token_by_xcn,
+
+            'view_count' => HashBXCounter::get_counter('view_count'),
+            'request_count' => HashBXCounter::get_counter('request_count')
         ]);
     }
 
@@ -455,6 +467,8 @@ class SiteController extends Controller
         }
         // ------------------------------ END Token/ETCMHs ------------------------------
 
+        HashBXCounter::counter_plus_one('view_count',1);
+        HashBXCounter::counter_plus_one('request_count',9);
 
         return view('cloudmining', [
             'time_text' => thaidate("วันlที่ j F H:i น.", time()),
@@ -491,6 +505,9 @@ class SiteController extends Controller
 
             'token_per_etcmhs_buy_rate' => $token_per_etcmhs_buy_rate,
             'token_per_etcmhs_sell_rate' => $token_per_etcmhs_sell_rate,
+
+            'view_count' => HashBXCounter::get_counter('view_count'),
+            'request_count' => HashBXCounter::get_counter('request_count')
         ]);
     }
 
@@ -567,6 +584,9 @@ class SiteController extends Controller
         }
         // ------------------------------ END Token/HBX -----------------------------
 
+        HashBXCounter::counter_plus_one('view_count',1);
+        HashBXCounter::counter_plus_one('request_count',3);
+
         return view('whale-calculator', [
             'time_text' => thaidate("วันlที่ j F H:i น.", time()),
             'btc_last_price' => $btc_last_price,
@@ -576,21 +596,36 @@ class SiteController extends Controller
 
             // 'token_per_hbx_buy_rate' => $token_per_hbx_buy_rate,
             // 'token_per_hbx_sell_rate' => $token_per_hbx_sell_rate,
+
+            'view_count' => HashBXCounter::get_counter('view_count'),
+            'request_count' => HashBXCounter::get_counter('request_count')
         ]);
     }
 
     public function faq(Request $request)
     {
-        return view('faq');
+        HashBXCounter::counter_plus_one('view_count',1);
+        return view('faq', [
+            'view_count' => HashBXCounter::get_counter('view_count'),
+            'request_count' => HashBXCounter::get_counter('request_count')
+        ]);
     }
 
     public function aboutus(Request $request)
     {
-        return view('aboutus');
+        HashBXCounter::counter_plus_one('view_count',1);
+        return view('aboutus', [
+            'view_count' => HashBXCounter::get_counter('view_count'),
+            'request_count' => HashBXCounter::get_counter('request_count')
+        ]);
     }
 
     public function tipsAndTricks(Request $request)
     {
-        return view('tips-and-tricks');
+        HashBXCounter::counter_plus_one('view_count',1);
+        return view('tips-and-tricks', [
+            'view_count' => HashBXCounter::get_counter('view_count'),
+            'request_count' => HashBXCounter::get_counter('request_count')
+        ]);
     }
 }

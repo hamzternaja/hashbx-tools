@@ -72,4 +72,5 @@
         <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA81tUm5GHwFDXasINCc5wINYF0S1dcAhqokLzS-wisl8eamE3"><img style="display:block;margin:0px auto;" src="/images/boat.png" /></a>
     </div>
 </div>
+
 @endsection
