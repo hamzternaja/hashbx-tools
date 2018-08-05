@@ -69,7 +69,7 @@
                 </div>
                 <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
                     <div class="card-body">
-                        ฺHBX 
+                        HBX 
                     </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@
                 </div>
                 <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
                     <div class="card-body">
-                        ฺHBX 
+                        HBX 
                     </div>
                 </div>
             </div>
@@ -113,6 +113,20 @@
                     <div class="card-body">
                         BTC BCH โอนเข้าและออกได้ <br/>
                         DOGE XCN โอนออกได้อย่างเดียว
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingEight">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                            *** ถ้าอนาคตราคา Token เปลี่ยนเป็น USDT จริงๆ แล้ว โปรแกรมนี้จะเป็นอย่างไร ***
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+                    <div class="card-body">
+                        นั่นคือ เป้าหมายสำคัญของโปรแกรมนี้เลยครับ ถ้า Token ราคาเท่ากับ USDT และ บริษัท HASHBX เปิดให้โอนเข้าและออก USDT ได้จริงๆ เป็นกระดานเทรดอิสระ โปรแกรมนี้ก็ไม่มีความจำเป็นที่ต้องใช้อีกต่อไป ผมถือว่าประสบความสำเร็จมากๆ กับโปรแกรมนี้ และจะปิดตัว เปลี่ยนกลายเป็นระบบ วิเคราะห์ข้อมูลต่างๆ ของ HASHBX และ ICO ที่เกี่ยวข้องแทน ซึ่งกว่าจะถึงวันนั้น ผมว่าใช้เวลาพอสมควร (หลายเดือน จนอาจเป็นปี) ซึ่งผมก็ภาวนารอให้ถึงวันนั้นอยู่เช่นกัน
                     </div>
                 </div>
             </div>
