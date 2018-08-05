@@ -31,11 +31,9 @@
         bottom: 0;
         width: 100%;
         /* Set the fixed height of the footer here */
-        height: 60px;
         line-height: 60px; /* Vertically center the text there */
         background-color: #333333;
     }
-
 
     /* Custom page CSS
     -------------------------------------------------- */
@@ -98,13 +96,13 @@
 
     </nav>
 
-    <div class="container" style="margin-top:30px">
+    <div class="container" style="margin-top:30px;padding-bottom:50px;">
         @yield('content')
     </div>
 
     <footer class="footer">
       <div class="container">
-        <span class="text-muted">This page viewed {{ $view_count }} times. Request {{ $request_count }} time.</span>
+        <span class="text-muted">หน้านี้ถูกแสดง {{ $view_count }} ครั้ง มีการส่ง HTTP Request ทั้งสิ้น {{ $request_count }} ครั้ง. (เริ่มนับตั้งแต่วันที่ 29 ก.ค. 2561 เวลา 17.40 น.)</span>
       </div>
     </footer>
 

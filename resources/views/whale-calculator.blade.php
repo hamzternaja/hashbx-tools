@@ -75,7 +75,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="text-center">7/7/2018 (ปัจจุบัน)</th>
+                            <td class="text-center">(ปัจจุบัน)</th>
                             <td><input type="number" style="min-width:150px" class="form-control text-right" v-model="hbx"></td>
                             <td><input type="number" style="min-width:150px" class="form-control text-right" v-model="price_per_hbx"></td>
                             <td><input type="number" style="min-width:150px" class="form-control text-right" disabled :value="price1"></td>
