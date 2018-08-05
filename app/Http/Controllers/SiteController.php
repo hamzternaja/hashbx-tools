@@ -43,8 +43,7 @@ class SiteController extends Controller
     {
         // ------------------------ BX Data ------------------------------------------------
 
-        // $output = $this->curlGet('https://bx.in.th/api/');
-        $output = $this->curlGet('http://mc-skythunder.com:8888/');
+        $output = $this->curlGet('https://bx.in.th/api/');
 
         $output_arr = json_decode($output, true);
 
@@ -147,8 +146,7 @@ class SiteController extends Controller
     {
         // ------------------------ BX Data ------------------------------------------------
 
-        // $output = $this->curlGet('https://bx.in.th/api/');
-        $output = $this->curlGet('http://mc-skythunder.com:8888/');
+        $output = $this->curlGet('https://bx.in.th/api/');
 
         $output_arr = json_decode($output, true);
 
@@ -281,8 +279,7 @@ class SiteController extends Controller
     {
         // ------------------------ BX Data ------------------------------------------------
 
-        // $output = $this->curlGet('https://bx.in.th/api/');
-        $output = $this->curlGet('http://mc-skythunder.com:8888/');
+        $output = $this->curlGet('https://bx.in.th/api/');
 
         $output_arr = json_decode($output, true);
 
@@ -515,8 +512,7 @@ class SiteController extends Controller
     {
         // ------------------------ BX Data ------------------------------------------------
 
-        // $output = $this->curlGet('https://bx.in.th/api/');
-        $output = $this->curlGet('http://mc-skythunder.com:8888/');
+        $output = $this->curlGet('https://bx.in.th/api/');
 
         $output_arr = json_decode($output, true);
 
